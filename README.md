@@ -1,5 +1,9 @@
 # SPEI Drought Classification — 7-Class Supervised ML Pipeline
 
+![Python](https://img.shields.io/badge/Python-3.9+-blue)
+![License](https://img.shields.io/badge/License-MIT-green)
+![IBM ML Certificate](https://img.shields.io/badge/IBM-ML%20Professional%20Certificate-blue)
+
 Multi-class drought severity classification for Moldova using SPEI-3 (Standardized Precipitation-Evapotranspiration Index), built as part of the **IBM Machine Learning Professional Certificate**.
 
 ## Overview
