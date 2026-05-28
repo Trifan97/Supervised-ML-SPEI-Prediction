@@ -46,13 +46,28 @@ The pipeline architecture and all ML methodology are identical to work validated
 - **Probability calibration** via `CalibratedClassifierCV` (isotonic)
 - **Ordinal-weighted F1** metric penalising cross-class errors proportional to severity distance
 
-## Results (best model — HistGradientBoosting on synthetic data)
+## Results (best model — HistGradientBoosting, synthetic dataset)
 
-| Metric | Value |
+| Metric | LR | Random Forest | **HistGBT** |
+|---|---|---|---|
+| **Macro F1** ★ | 0.741 | 0.809 | **0.875** |
+| Weighted F1 | 0.797 | 0.878 | **0.929** |
+| Ordinal F1 | 0.964 | 0.979 | **0.988** |
+| ROC-AUC (macro OvR) | 0.978 | 0.987 | **0.996** |
+| Accuracy | 0.783 | 0.875 | **0.928** |
+| CV Macro F1 (5-fold) | 0.852 ± 0.005 | 0.922 ± 0.007 | **0.954 ± 0.006** |
+
+**Per-class F1 — HistGradientBoosting:**
+
+| Class | F1 |
 |---|---|
-| Macro F1 | — run pipeline to obtain |
-| Weighted F1 | — |
-| ROC-AUC (macro OvR) | — |
+| Extremely Dry | 0.836 |
+| Severely Dry | 0.838 |
+| Moderately Dry | 0.859 |
+| Normal | 0.968 |
+| Moderately Wet | 0.877 |
+| Severely Wet | 0.865 |
+| Extremely Wet | 0.879 |
 
 > Re-run `modelling_pipeline_7class_v2.py` to reproduce all metrics and plots.
 
